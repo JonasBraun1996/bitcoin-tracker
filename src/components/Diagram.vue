@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    <h1>Diagramm</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   name: 'Diagram',
   components: {
-    
+
   }
 }
 </script>
