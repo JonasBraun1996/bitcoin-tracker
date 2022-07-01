@@ -2,12 +2,13 @@ import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
 import VueRouter from 'vue-router';
-import MainView from '@/components/MainView';
 
 import './assets/app.scss';
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import MainView from "@/components/MainView";
+import Diagram from "@/components/Diagram";
 
 Vue.config.productionTip = false;
 
@@ -23,9 +24,19 @@ const routes = [
     redirect: "/menu"
   },
   {
+    path: "/app",
+    name: "App",
+    component: App
+  },
+  {
     path: "/menu",
     name: "MainView",
     component: MainView
+  },
+  {
+    path: "/diagramm",
+    name: "Diagram",
+    component: Diagram
   }
 ];
 
