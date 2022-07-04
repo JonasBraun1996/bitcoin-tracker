@@ -8,7 +8,10 @@ import './assets/app.scss';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import MainView from "@/components/MainView";
+import Detail from "@/components/Detail";
+import Converter from "@/components/Converter";
 import Diagram from "@/components/Diagram";
+import Wallet from "@/components/Wallet";
 
 Vue.config.productionTip = false;
 
@@ -34,9 +37,24 @@ const routes = [
     component: MainView
   },
   {
+    path: "/detail",
+    name: "Detail",
+    component: Detail
+  },
+  {
+    path: "/converter",
+    name: "Umrechnung",
+    component: Converter
+  },
+  {
     path: "/diagramm",
     name: "Diagram",
     component: Diagram
+  },
+  {
+    path: "/wallet",
+    name: "Wallet",
+    component: Wallet
   }
 ];
 

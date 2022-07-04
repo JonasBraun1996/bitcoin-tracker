@@ -1,6 +1,7 @@
 <template>
   <div>
-    <b-dropdown text="Währung wählen" class="m-md-2">
+    <h1 class="mb-5">Dashboard</h1>
+    <b-dropdown text="Währung wählen" class="mb-5">
       <b-dropdown-item @click="setCurrentCurrency('USD')">USD</b-dropdown-item>
       <b-dropdown-item @click="setCurrentCurrency('EUR')">EUR</b-dropdown-item>
       <b-dropdown-item @click="setCurrentCurrency('CHF')">CHF</b-dropdown-item>
@@ -27,7 +28,6 @@ export default {
   data() {
     return {
       bitcoinApiResponse: [],
-      fullResponse: [],
       currentCurrency: "USD"
     }
   },
@@ -44,8 +44,6 @@ export default {
     },
     async getBitcoinPrice() {
       await axios.get("/ticker").then((response) => {
-        console.log(response);
-        this.fullResponse = response;
         this.bitcoinApiResponse = response.data[this.currentCurrency];
       });
     }
