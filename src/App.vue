@@ -1,23 +1,26 @@
 <template>
   <div id="app">
     <bitcoin-header id="header"></bitcoin-header>
-    <navigation-menu></navigation-menu>
-    <router-view id="router"></router-view>
-    <bitcoin-footer id="footer"></bitcoin-footer>
+    <div class="row remove-margin-right f-height">
+      <div class="col-2 f-height">
+        <navigation-menu></navigation-menu>
+      </div>
+      <div class="col-10 remove-margin-right">
+        <router-view id="router"></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 
 import BitcoinHeader from "@/components/BitcoinHeader";
-import BitcoinFooter from "@/components/BitcoinFooter";
 import NavigationMenu from "@/components/NavigationMenu";
 
 export default {
   name: 'App',
   components: {
     BitcoinHeader,
-    BitcoinFooter,
     NavigationMenu
   }
 }
@@ -31,12 +34,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
 }
 
 #header {
   width: 100%;
-  background-color: #FF9900;
+  background-color: #FF9900 !important;
   color: #ffffff;
   position: absolute;
   top: 0;
@@ -45,18 +48,17 @@ export default {
 }
 
 #router {
-  margin-top: 10em;
+  margin-top: 6em;
+  height: 100%;
 }
 
-#footer {
-  width: 100%;
-  background-color: #FF9900;
-  color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  height: 5em;
-  line-height: 60px;
+.remove-margin-right {
+  margin-right: 0 !important;
+  height: 100%;
 }
 
+.f-height {
+  height: 100%;
+}
 
 </style>

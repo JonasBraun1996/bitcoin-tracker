@@ -14,9 +14,12 @@ export default {
 
   .headline {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    text-align: flex-start;
     align-items: center;
+    padding-left: 3em;
+    border-color: #000000 !important;
+    border-style: solid;
+    border-width: 0 0 2px 0;
   }
 
 </style>
