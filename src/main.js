@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import axios from 'axios';
 import VueRouter from 'vue-router';
+import store from './store';
 
 import './assets/app.scss';
 
@@ -10,7 +11,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import MainView from "@/components/MainView";
 import Detail from "@/components/Detail";
 import Converter from "@/components/Converter";
-import Diagram from "@/components/Diagram";
+import Diagramm from "@/components/Diagramm";
 import Wallet from "@/components/Wallet";
 
 Vue.config.productionTip = false;
@@ -23,16 +24,12 @@ Vue.use(IconsPlugin)
 
 const routes = [
   {
-    path: "/",
-    redirect: "/menu"
-  },
-  {
     path: "/app",
     name: "App",
     component: App
   },
   {
-    path: "/menu",
+    path: "/",
     name: "MainView",
     component: MainView
   },
@@ -48,8 +45,8 @@ const routes = [
   },
   {
     path: "/diagramm",
-    name: "Diagram",
-    component: Diagram
+    name: "Diagramm",
+    component: Diagramm
   },
   {
     path: "/wallet",
@@ -68,5 +65,6 @@ const router = new VueRouter ({
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
