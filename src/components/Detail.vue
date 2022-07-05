@@ -52,9 +52,6 @@ export default {
         this.totalbc = this.numberWithCommas(response.data);
       })
     },
-    numberWithCommas(number) {
-      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    },
     async getMarketCap() {
       await axios.get("/q/marketcap").then((response) => {
         this.marketCap = this.numberWithCommas(response.data);
@@ -79,7 +76,10 @@ export default {
       await axios.get("/q/getdifficulty").then((response) => {
         this.difficulty = response.data;
       })
-    }
+    },
+    numberWithCommas(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
   },
   mounted() {
     this.getBitcoinDetails();

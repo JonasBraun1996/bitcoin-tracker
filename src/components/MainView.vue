@@ -20,7 +20,7 @@
 <script>
 
 import axios from "axios";
-import Diagram from "@/components/Diagram";
+import Diagramm from "@/components/Diagramm";
 import BitcoinFooter from "@/components/BitcoinFooter";
 
 export default {
@@ -32,7 +32,7 @@ export default {
     }
   },
   components: {
-    Diagram,
+    Diagramm,
     BitcoinFooter
   },
   mounted() {

@@ -2,7 +2,7 @@
     <nav role="navigation menu-container" class="full-height">
       <ul class="nav navbar-nav full-height nav-color">
         <li class="item">
-          <button @click="goToRoute('/menu')">Dashboard</button>
+          <button @click="goToRoute('/')">Dashboard</button>
           </li>
         <li class="item">
           <button @click="goToRoute('/detail')">Bitcoin Details</button>
@@ -10,9 +10,12 @@
         <li class="item">
           <button @click="goToRoute('/converter')">Umrechnung</button>
         </li>
+             <li class="item">
+          <button @click="goToRoute('/diagramm')">Diagramm</button>
+        </li>
         <li class="item">
-          <button @click="goToRoute('/wallet')">Wallet</button>
-          </li>
+          <button @click="goToRoute('/wallet')">Meine Bitcoin</button>
+        </li>
       </ul>
     </nav>  
 </template>
