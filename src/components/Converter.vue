@@ -49,7 +49,8 @@ export default {
       this.chosenCurrencyValid = this.chosenCurrency.length > 2 && this.bitcoinPrices[this.chosenCurrency] !== undefined;
     },
     resetInputs() {
-
+      this.chosenCurrency = "";
+      this.valueForConvert = 0;
     },
     calculateValues() {
       if(this.chosenCurrencyValid && this.chosenCurrencyValue !== 0) {
